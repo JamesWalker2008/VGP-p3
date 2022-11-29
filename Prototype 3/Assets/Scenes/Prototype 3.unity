@@ -390,21 +390,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 2f8d00bf5057f624e949aef802595da9, type: 3}
   m_PrefabInstance: {fileID: 1984787722}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1939633579
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1939633578}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25c02c7dae68ae94ebe677c12e95fd6f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jumpForce: 10
-  gravityModifier: 0
-  isonGround: 1
 --- !u!65 &1939633580
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -434,6 +419,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1939633584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1939633578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25c02c7dae68ae94ebe677c12e95fd6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpForce: 10
+  gravityModifier: 3
+  isonGround: 1
 --- !u!1001 &1984787722
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -607,13 +607,33 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5391910904367868923, guid: 126edee3dac197244ac6295bba05e691, type: 3}
+      propertyPath: gravityModifier
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -1799446723460155807, guid: 126edee3dac197244ac6295bba05e691, type: 3}
       propertyPath: m_Size.x
-      value: 0.2
+      value: 0.31882095
       objectReference: {fileID: 0}
     - target: {fileID: -1799446723460155807, guid: 126edee3dac197244ac6295bba05e691, type: 3}
       propertyPath: m_Size.y
-      value: 9
+      value: 1.2522413
+      objectReference: {fileID: 0}
+    - target: {fileID: -1799446723460155807, guid: 126edee3dac197244ac6295bba05e691, type: 3}
+      propertyPath: m_Size.z
+      value: 5.224654
+      objectReference: {fileID: 0}
+    - target: {fileID: -1799446723460155807, guid: 126edee3dac197244ac6295bba05e691, type: 3}
+      propertyPath: m_Center.x
+      value: 0.03398609
+      objectReference: {fileID: 0}
+    - target: {fileID: -1799446723460155807, guid: 126edee3dac197244ac6295bba05e691, type: 3}
+      propertyPath: m_Center.y
+      value: 0.4225462
+      objectReference: {fileID: 0}
+    - target: {fileID: -1799446723460155807, guid: 126edee3dac197244ac6295bba05e691, type: 3}
+      propertyPath: m_Center.z
+      value: -0.1123271
       objectReference: {fileID: 0}
     - target: {fileID: 1378350638185160376, guid: 126edee3dac197244ac6295bba05e691, type: 3}
       propertyPath: m_Name
