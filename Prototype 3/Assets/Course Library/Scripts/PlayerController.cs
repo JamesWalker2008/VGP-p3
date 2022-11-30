@@ -25,9 +25,8 @@ public class PlayerController : MonoBehaviour
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             isonGround = false;
        
-            transform.Translate(Vector3.left * Time.deltaTime * speed);
         }
-
+        transform.Translate(Vector3.forward * Time.deltaTime * speed);
    
     }
     private void OnCollisionEnter(Collision collision)
