@@ -15,24 +15,25 @@ public class PlayerController : MonoBehaviour
     {
         playerRb = GetComponent<Rigidbody>();
         Physics.gravity *= gravityModifier;
-    }
+        playerRb = GetComponent<Rigidbody>();
+       
+      }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && isonGround)
+        if (Input.GetKeyDown(KeyCode.Space)) 
         {
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             isonGround = false;
-       
+            
         }
         transform.Translate(Vector3.forward * Time.deltaTime * speed);
-   
     }
-    private void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter(Collision collision)
     {
         isonGround = true;
     }
-}   
+}
 
 
