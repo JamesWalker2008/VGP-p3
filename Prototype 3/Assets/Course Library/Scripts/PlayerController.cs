@@ -15,9 +15,8 @@ public class PlayerController : MonoBehaviour
     {
         playerRb = GetComponent<Rigidbody>();
         Physics.gravity *= gravityModifier;
-        playerRb = GetComponent<Rigidbody>();
-       
-      }
+        
+    }
 
     // Update is called once per frame
     void Update()
@@ -26,7 +25,7 @@ public class PlayerController : MonoBehaviour
         {
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             isonGround = false;
-            
+            playerRb.AddForce(Vector3.up * 100, ForceMode Impulse); 
         }
         transform.Translate(Vector3.forward * Time.deltaTime * speed);
     }
